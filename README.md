@@ -1,6 +1,6 @@
 # README
 
-TradeX-chart is a highly customizable stock trade chart with **one** dependency written in plain JavaScript; use it with any framework or backend.
+XTrade is a highly customizable stock trade chart with **one** dependency written in plain JavaScript; use it with any framework or backend.
 
 <div align="center">
 
@@ -16,21 +16,16 @@ TradeX-chart is a highly customizable stock trade chart with **one** dependency 
 
 ## Table of Contents
 
-* [Demo](#demo)
-* [Getting Started](#getting-started)
-* [Documentation](/docs/documentation.md)
-* [Features](#features)
-* [License](/LICENSE)
-
-## Demo
-
-### [Live Demo](https://tradex-chart.guildmedia.net/)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Documentation](/docs/documentation.md)
+- [Features](#features)
 
 ## Getting Started
 
 ### Requirements
 
-TradeX-chart targets browsers that support [ECMAScript 2022](https://www.ecma-international.org/wp-content/uploads/ECMA-262_13th_edition_june_2022.pdfhttps:/).
+XTrade targets browsers that support [ECMAScript 2022](https://www.ecma-international.org/wp-content/uploads/ECMA-262_13th_edition_june_2022.pdfhttps:/).
 
 ## Install
 
@@ -72,7 +67,7 @@ let state = {
 
 // minimal config
 const config = {
-  id: "TradeX_test",
+  id: "XTrade",
   title: "BTC/USDT",
   width: 1000,
   height: 800,
@@ -97,82 +92,24 @@ chart.start(config)
 
 Types provided
 
-## Documentation
-
-Documentation can be found here:
-[Documentation](https://tradex-app.github.io/TradeX-chart/)
-
-or built and run locally from the repository by running:
-
-```shell
-git clone https://github.com/tradex-app/TradeX-chart
-cd ./tradex-chart/src/docs
-npm run build
-```
-
-## Editable Live Sandbox Examples
-
-Editable sandbox examples can found on [CodeSandbox.io](https://codesandbox.io/u/tradex-app)
-
 ## Framework Integration Examples
 
-* [React / NextJS](nextjs)
-* [Vue](https://github.com/tradex-app/TradeX-Chart-Vue-JS)
-* Svelte (TODO:)
+- [React / NextJS](nextjs)
+- [Vue](https://github.com/tradex-app/TradeX-Chart-Vue-JS)
+- Svelte (TODO:)
 
 ## Features
 
-* Plain JavaScript with no framework dependencies
-* All chart features and functions accessible via [API](https://tradex-app.github.io/TradeX-chart/api/core/)
-* [State object](https://tradex-app.github.io/TradeX-chart/reference/state/) defines [chart configuration](https://tradex-app.github.io/TradeX-chart/reference/02_configuration/), [indicators](https://tradex-app.github.io/TradeX-chart/reference/indicators_default/) and tools
-* State can be [imported](https://https://tradex-app.github.io/TradeX-chart/reference/state/#create-and-use-a-state) or [exported](https://tradex-app.github.io/TradeX-chart/reference/state/#export) for storage and retrieval
-* Indicator calculation provided by [talib-web](https://https://anchegt.github.io/talib-web/) as a WebAssembly module.
-* [Custom Themes](https://tradex-app.github.io/TradeX-chart/reference/themes/)
-* [Custom Indicators](https://tradex-app.github.io/TradeX-chart/reference/indicators_default/https:/)
-* [Custom Overlays](https://tradex-app.github.io/TradeX-chart/reference/overlays_custom/https:/)
-* Custom Drawing Tools (to be implemented)
-* [Event Hub](https://tradex-app.github.io/TradeX-chart/reference/events/) - subscribe to chart events
-* Rendering Optimization - smooth performance
-* High frequency chart candles updates
-* [Export chart to png, jpg](https://tradex-app.github.io/TradeX-chart/reference/api-examples/#download-image), webp, with optional watermarking
-
-## Support
-
-For the latest news on TradeX-chart, feedback, feature requests, and community, join us over on Discord or GitHub.
-
-* [TradeX Discord](https://discord.gg/6XS9tDrcdq)
-* [Issue Tracker](https://github.com/tradex-app/TradeX-chart/issues)
-* [GitHub](https://github.com/tradex-app/TradeX-chart/discussions)
-* [Discord](https://discord.gg/6XS9tDrcdq)
-
-## Contributing
-
-Testing, [bug reports and feature requests](https://github.com/tradex-app/TradeX-chart/issues) welcome
-
-If you have any bugs, issues, or feature requests, please, before making a submission, first:
-* [check the GitHub issue tracker](https://github.com/tradex-app/TradeX-chart/issues)
-* [documentation](https://tradex-app.github.io/TradeX-chart/)
-* [live examples](https://tradex-chart.guildmedia.net/examples/static_chart/)
-* [development roadmap](https://github.com/tradex-app/TradeX-chart/blob/master/docs/TradeX-chart-Development-Roadmap.pdf)
-
-To submit an issue:
-* [Fork the chart repostitory](https://github.com/tradex-app/TradeX-chart/fork)
-* Create your Feature Branch ``git checkout -b feature/AmazingFeature``
-* Commit your Changes ``git commit -m 'Add some AmazingFeature'``
-* Push to the Branch ``git push origin feature/AmazingFeature``
-* Open a [Pull Request](https://github.com/tradex-app/TradeX-chart/pulls)
-
-You can help speed up development by contributing with crypto or PayPal.
-
----
-
-```javascript
-if (youEnjoyed) {
-    starThisRepository();
-}
-```
-                        
-## Stargazers over time
-[![Stargazers over time](https://starchart.cc/tradex-app/TradeX-chart.svg?variant=adaptive)](https://starchart.cc/tradex-app/TradeX-chart)
-
-                    
+- Plain JavaScript with no framework dependencies
+- All chart features and functions accessible via [API](https://tradex-app.github.io/TradeX-chart/api/core/)
+- [State object](https://tradex-app.github.io/TradeX-chart/reference/state/) defines [chart configuration](https://tradex-app.github.io/TradeX-chart/reference/02_configuration/), [indicators](https://tradex-app.github.io/TradeX-chart/reference/indicators_default/) and tools
+- State can be [imported](https://https://tradex-app.github.io/TradeX-chart/reference/state/#create-and-use-a-state) or [exported](https://tradex-app.github.io/TradeX-chart/reference/state/#export) for storage and retrieval
+- Indicator calculation provided by [talib-web](https://https://anchegt.github.io/talib-web/) as a WebAssembly module.
+- [Custom Themes](https://tradex-app.github.io/TradeX-chart/reference/themes/)
+- [Custom Indicators](https://tradex-app.github.io/TradeX-chart/reference/indicators_default/https:/)
+- [Custom Overlays](https://tradex-app.github.io/TradeX-chart/reference/overlays_custom/https:/)
+- Custom Drawing Tools (to be implemented)
+- [Event Hub](https://tradex-app.github.io/TradeX-chart/reference/events/) - subscribe to chart events
+- Rendering Optimization - smooth performance
+- High frequency chart candles updates
+- [Export chart to png, jpg](https://tradex-app.github.io/TradeX-chart/reference/api-examples/#download-image), webp, with optional watermarking

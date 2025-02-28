@@ -1,5 +1,5 @@
 {
-  "name": "tradex-chart",
+  "name": "xtrade-chart",
   "files": [
     "dist",
     "LICENSE",
@@ -18,7 +18,7 @@
     }
   },
   "private": false,
-  "version": "0.157.9",
+  "version": "0.158.0",
   "license": "GNU GPL3",
   "scripts": {
     "dev": "vite",
