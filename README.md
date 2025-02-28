@@ -2,16 +2,6 @@
 
 XTrade is a highly customizable stock trade chart with **one** dependency written in plain JavaScript; use it with any framework or backend.
 
-<div align="center">
-
-[![Version](https://badgen.net/npm/v/tradex-chart)](https://www.npmjs.com/package/tradex-chart)
-[![Size](https://badgen.net/bundlephobia/minzip/tradex-chart)](https://bundlephobia.com/result?p=tradex-chart)
-[![LICENSE](https://badgen.net/github/license/tradex-app/tradex-chart)](LICENSE)
-[![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/tradex-app/TradeX-chart)
-[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/6XS9tDrcdq)
-
-</div>
-
 ![](assets/EMA.png)
 
 ## Table of Contents
@@ -32,13 +22,13 @@ XTrade targets browsers that support [ECMAScript 2022](https://www.ecma-internat
 ### NPM
 
 ```
-npm install tradex-chart
+npm install xtrade-chart
 ```
 
 ### In Browser
 
 ```
-<script src="tradex-chart.es.js"></script>
+<script src="xtrade-chart.es.js"></script>
 ```
 
 ## How to Use
@@ -50,7 +40,7 @@ Minimal working example:
 
 <script>
 
-import {Chart, DOM} from 'tradex-chart'
+import {Chart, DOM} from 'xtrade-chart'
 import * as talib from "talib-web"
 
 // minimal data state
@@ -80,7 +70,7 @@ const config = {
 }
 
 const mount = document.getElementById('myChartDiv')
-const chart = document.createElement("tradex-chart")
+const chart = document.createElement("xtrade-chart")
 
 mount.appendChild(chart)
 chart.start(config)
@@ -95,21 +85,21 @@ Types provided
 ## Framework Integration Examples
 
 - [React / NextJS](nextjs)
-- [Vue](https://github.com/tradex-app/TradeX-Chart-Vue-JS)
+- [Vue](https://github.com/xtrade-app/xtrade-Chart-Vue-JS)
 - Svelte (TODO:)
 
 ## Features
 
 - Plain JavaScript with no framework dependencies
-- All chart features and functions accessible via [API](https://tradex-app.github.io/TradeX-chart/api/core/)
-- [State object](https://tradex-app.github.io/TradeX-chart/reference/state/) defines [chart configuration](https://tradex-app.github.io/TradeX-chart/reference/02_configuration/), [indicators](https://tradex-app.github.io/TradeX-chart/reference/indicators_default/) and tools
-- State can be [imported](https://https://tradex-app.github.io/TradeX-chart/reference/state/#create-and-use-a-state) or [exported](https://tradex-app.github.io/TradeX-chart/reference/state/#export) for storage and retrieval
+- All chart features and functions accessible via [API](https://xtrade-app.github.io/xtrade-chart/api/core/)
+- [State object](https://xtrade-app.github.io/xtrade-chart/reference/state/) defines [chart configuration](https://xtrade-app.github.io/xtrade-chart/reference/02_configuration/), [indicators](https://xtrade-app.github.io/xtrade-chart/reference/indicators_default/) and tools
+- State can be [imported](https://https://xtrade-app.github.io/xtrade-chart/reference/state/#create-and-use-a-state) or [exported](https://xtrade-app.github.io/xtrade-chart/reference/state/#export) for storage and retrieval
 - Indicator calculation provided by [talib-web](https://https://anchegt.github.io/talib-web/) as a WebAssembly module.
-- [Custom Themes](https://tradex-app.github.io/TradeX-chart/reference/themes/)
-- [Custom Indicators](https://tradex-app.github.io/TradeX-chart/reference/indicators_default/https:/)
-- [Custom Overlays](https://tradex-app.github.io/TradeX-chart/reference/overlays_custom/https:/)
+- [Custom Themes](https://xtrade-app.github.io/xtrade-chart/reference/themes/)
+- [Custom Indicators](https://xtrade-app.github.io/xtrade-chart/reference/indicators_default/https:/)
+- [Custom Overlays](https://xtrade-app.github.io/xtrade-chart/reference/overlays_custom/https:/)
 - Custom Drawing Tools (to be implemented)
-- [Event Hub](https://tradex-app.github.io/TradeX-chart/reference/events/) - subscribe to chart events
+- [Event Hub](https://xtrade-app.github.io/xtrade-chart/reference/events/) - subscribe to chart events
 - Rendering Optimization - smooth performance
 - High frequency chart candles updates
-- [Export chart to png, jpg](https://tradex-app.github.io/TradeX-chart/reference/api-examples/#download-image), webp, with optional watermarking
+- [Export chart to png, jpg](https://xtrade-app.github.io/xtrade-chart/reference/api-examples/#download-image), webp, with optional watermarking
