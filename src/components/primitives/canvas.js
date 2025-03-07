@@ -34,12 +34,7 @@ class Node {
     this.setSize(rect.width || cfg.width, rect.height || cfg.height);
   }
 
-  get id() { return this.#id }
-  get scene() { return this.#scene }
-  get layers() { return this.#layers }
-  get container() { return this.#container }
-  // does the browser support OffscreenCanvas ?
-  get OffscreenCanvas() { return _OffscreenCanvas }
+ 
 
   generateKey() {
     return this.#key++
@@ -102,18 +97,16 @@ class Node {
         layer,
         key;
 
-    while (n >= 0) {
-      layer = layers[n];
-      key = layer.hit.getIntersection(x, y);
-      if (key >= 0) {
-        return key;
-      }
-      n--;
-    }
+    
 
     return -1;
   }
-
+  get id() { return this.#id }
+  get scene() { return this.#scene }
+  get layers() { return this.#layers }
+  get container() { return this.#container }
+  // does the browser support OffscreenCanvas ?
+  get OffscreenCanvas() { return _OffscreenCanvas }
   /**
    * get viewport index in all CEL viewports
    * @returns {number|null}
@@ -175,6 +168,32 @@ class Node {
           layer.height
         );
       }
+
+      const ctx = this.ctx;
+    const hilo = data.raw[4] >= data.raw[1];
+    const barColour = hilo ? this.theme.up.colour.value: this.theme.dn.colour.value
+    
+    let w = Math.max(data.w - 1, 1);
+    let hw = w * 0.5;
+    w = this.alignToPixel(w);
+    
+    // Calculate center x position
+    const centerX = this.alignToPixel(data.x);
+    // Calculate bar position to be centered on centerX
+    const barX = centerX - (w / 2) + hw;
+    const h = this.alignToPixel(data.h);
+    const z = this.alignToPixel(data.z);
+    
+    ctx.save();
+    ctx.fillStyle = barColour;
+
+    // Draw bar centered on the x position
+    ctx.fillRect(
+      barX,
+      z - h,
+      w,
+      h
+    );
     }
   }
 }
@@ -196,11 +215,7 @@ class Viewport extends Node {
 
     const canvas = this.scene.canvas
     const c = cfg.container
-    if (c?.hasCanvasSlot)
-      canvas.slot = "viewportCanvas"
-    // clear container
-    c.innerHTML = "";
-    c.appendChild(canvas);
+    
 
     CEL.viewports.push(this);
   }
@@ -320,8 +335,6 @@ class Layer {
 
     this.width = w;
     this.height = h;
-    this.scene.setSize(w, h);
-    this.hit.setSize(w, h);
     return this;
   }
 

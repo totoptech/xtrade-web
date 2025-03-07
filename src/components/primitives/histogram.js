@@ -36,13 +36,7 @@ export default class Histogram {
         opts.stroke = cfg.upstroke
         opts.width = cfg.upwidth
       }
-      else {
-        h = y - z
-        y = z
-        opts.fill = cfg.dnfill
-        opts.stroke = cfg.dnstroke
-        opts.width = cfg.dnwidth
-      }
+     
       renderRect(ctx, x, y, w, h, opts)
     }
   }
