@@ -110,11 +110,6 @@ export default class Timeline extends Component {
     const el = this.#element
     this.#elViewport = el.viewport
     this.#elNavigation = el.overview
-    this.#elNavList = el.overview.icons
-    this.#elNavScrollBar = el.overview.scrollBar
-    this.#elNavScrollHandle = el.overview.handle
-    this.#elRwdStart = el.overview.rwdStart
-    this.#elFwdEnd = el.overview.fwdEnd
 
     // for (let i of this.#elNavList) {
     //   i.style.width = `${this.#icons.width}px`
@@ -161,12 +156,6 @@ export default class Timeline extends Component {
       const background = (this.core.theme.xAxis?.background) ?
         this.core.theme.xAxis.Background : this.core.theme.chart.Background
 
-      // this.#elNavigation.style.display = "none"
-      this.#elNavigation.style.visibility = "hidden"
-      this.#elFwdEnd.style['margin-top'] = `${this.#elViewport.clientHeight * -1}px`
-      this.#elRwdStart.style['margin-top'] = `${this.#elViewport.clientHeight * -1}px`
-      this.#elFwdEnd.style.background = this.core.theme.chart.Background
-      this.#elRwdStart.style.background = background
     }
   }
 
@@ -248,6 +237,14 @@ export default class Timeline extends Component {
       default:
         break
     }
+
+    
+      // this.#elNavigation.style.display = "none"
+      this.#elNavigation.style.visibility = "hidden"
+      this.#elFwdEnd.style['margin-top'] = `${this.#elViewport.clientHeight * -1}px`
+      this.#elRwdStart.style['margin-top'] = `${this.#elViewport.clientHeight * -1}px`
+      this.#elFwdEnd.style.background = this.core.theme.chart.Background
+      this.#elRwdStart.style.background = background
   }
 
   onPointerEnter(e) {
@@ -272,11 +269,6 @@ export default class Timeline extends Component {
   }
 
   onDoubleClick(e) {
-    this.core.jumpToEnd()
-    this.core.MainPane.draw(undefined, true)
-  }
-
-  onFwdEnd() {
     this.core.jumpToEnd()
     this.core.MainPane.draw(undefined, true)
   }
